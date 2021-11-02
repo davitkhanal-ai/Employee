@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 
 var employeeSchema = new mongoose.Schema({
-    fullname:{
+    fullName:{
         type: String
     },
     email:{
@@ -15,5 +15,8 @@ var employeeSchema = new mongoose.Schema({
         type:String
     }
 })
+
+
+
 
 mongoose.model('Employee', employeeSchema)
