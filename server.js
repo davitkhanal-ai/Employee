@@ -18,6 +18,11 @@ app.use(bodyparser.json())
 app.set("views", path.join(__dirname, "/views/"))
 app.engine('hbs', exphbs({extname: 'hbs', defaultLayout: 'mainLayout', layoutsDir: __dirname + "/views/layouts"}))
 
+app.get("/", (req,res) =>{
+    res.render("./employee/addorEdit.hbs")
+})
+
+
 //listening
 app.listen(3000, ()=>{
     console.log("Server is up")
