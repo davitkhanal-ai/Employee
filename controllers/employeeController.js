@@ -20,6 +20,7 @@ function insertRecord(req, res) {
   employee.email = req.body.email;
   employee.mobile = req.body.mobile;
   employee.city = req.body.city;
+  employee.id = req.body.id;
   employee.save((err, doc) => {
     if (!err) res.redirect("employee/list");
     else {

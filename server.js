@@ -23,4 +23,8 @@ app.listen(3000, ()=>{
     console.log("Server is up")
 })
 
+app.get("/",(req,res) => {
+    res.render("./employee/addorEdit.hbs")
+})
+
 app.use("/employee", employeeController)
